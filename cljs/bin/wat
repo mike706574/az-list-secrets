@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export TOOL_HOME=${TOOL_HOME:-$(npm -g root)/az-list-secrets}
+
+if [ $# -gt 0 ]; then
+    ARGS=("$@")
+else
+    ARGS=(main)
+fi
+
+NODE_PATH="${TOOL_HOME}/node_modules" ${TOOL_HOME}/node_modules/.bin/lumo -c ${TOOL_HOME}/src -m az-list-secrets.core "${ARGS[@]}"

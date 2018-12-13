@@ -1,0 +1,14 @@
+{
+  "name": "az-list-secrets",
+  "version": "1.0.0",
+  "bin": {
+    "az-list-secrets": "bin/az-list-secrets"
+  },
+  "scripts": {
+    "start": "lumo -c src -m az-list-secrets.core"
+  },
+  "dependencies": {
+    "lumo-cljs": "1.8.0",
+    "signal-exit": "3.0.2"
+  }
+}
